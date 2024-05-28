@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Med Ally</title>
+    <link rel="icon" href="icon-modified.png" type="image/x-icon">
+    <marquee>
+     CONSULTORIO MEDICO FAMILIAR ADULAM - JOSSDEV
+    </marquee>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #000000;
+        }  
+
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+            .marquee {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+            border: 1px solid rgba(0, 0, 0, .15);
+            background-color: #ffffff;
+            overflow: hidden;
+            position: relative;
+            height: 50px;
+            width: 100%;
+            /* Full width of its parent */
+            white-space: nowrap;
+        }
+
+        .marquee p {
+            position: absolute;
+            width: auto;
+            height: 100%;
+            margin: 0;
+            line-height: 50px;
+            text-align: center;
+            /* Start off the right edge */
+            transform: translateX(100%);
+            /* Animate to the left */
+            animation: scroll-left 20s linear infinite;
+        }
+
+        @keyframes scroll-left {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+
+
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #000000;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.2s;
+        }
+        .navbar a:hover {
+            background-color: #333333;
+        }
+        .search-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .search-container input {
+            padding: 10px;
+            width: 80%;
+            max-width: 600px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            background-color: #f8f8f8;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            margin: 20px;
+            width: 300px;
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card h3 {
+            background-color: #000000;
+            color: #ffffff;
+            padding: 15px;
+            margin: 0;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+        .card a {
+            display: block;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 10px;
+            text-decoration: none;
+            margin: 15px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+        .card a:hover {
+            background-color: #333333;
+        }
+    </style>
+    <script>
+        function searchCards() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.getElementsByClassName('card');
+            for (let i = 0; i < cards.length; i++) {
+                const card = cards[i];
+                const title = card.getElementsByTagName('h3')[0].innerText.toLowerCase();
+                if (title.includes(input)) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+    
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyD1b4HjM5FTzxvl_I320MCpqC5dTerR6PQ",
+          authDomain: "med-ally.firebaseapp.com",
+          projectId: "med-ally",
+          storageBucket: "med-ally.appspot.com",
+          messagingSenderId: "218410668869",
+          appId: "1:218410668869:web:ab653ed4b683ae4598242c",
+          measurementId: "G-1MCECPSKDH"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        import { GoogleAuthProvider } from "firebase/auth";
+
+const provider = new GoogleAuthProvider();
+
+      </script>
+</head>
+<body>
+    <header>
+        <h1>Med Ally</h1>
+    </header>
+    <div class="search-container">
+        <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Buscar documentos...">
+    </div>
+    <main id="inicio" class="container">
+        <div class="card">
+            <h3>MIENBRO SUPERIOR</h3>
+            <img src="mienbrosupe.jpg" alt="Descripción de la imagen 1">
+            <a href="https://drive.google.com/file/d/1Mf8kkW6DpON97RFxwMQ5Cq7i4SQ47bI2/view?usp=sharing" target="_blank">Ver Documento</a>
+        </div>
+        <div class="card">
+            <h3>ESCAPULA</h3>
+            <img src="esapula.jpg" alt="Descripción de la imagen 2">
+            <a href="https://drive.google.com/file/d/1Mf8kkW6DpON97RFxwMQ5Cq7i4SQ47bI2/view?usp=sharing" target="_blank">Ver Documento</a>
+        </div>
+        <div class="card">
+          <h3>CABEZA</h3>
+          <img src="cabeza.jpg" alt="Descripción de la imagen 1">
+          <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
+      </div>
+      <div class="card">
+          <h3>MANO</h3>
+          <img src="Mano.jpg" alt="Descripción de la imagen 2">
+          <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
+      </div>
+      <div class="card">
+        <h3>MIENBRO INFERIOR</h3>
+        <img src="mienbroinfe.jpg" alt="Descripción de la imagen 1">
+        <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
+    </div>
+    <div class="card">
+        <h3>Título del Documento 2</h3>
+        <img src="ruta-de-la-imagen-2.jpg" alt="Descripción de la imagen 2">
+        <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
+    </div>
+    <div class="card">
+      <h3>Título del Documento 1</h3>
+      <img src="ruta-de-la-imagen-1.jpg" alt="Descripción de la imagen 1">
+      <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
+  </div>
+  <div class="card">
+      <h3></h3>
+      <img src="" alt="Descripción de la imagen 2">
+      <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
+  </div>
+  <div class="card">
+    <h3>Título del Documento 1</h3>
+    <img src="ruta-de-la-imagen-1.jpg" alt="Descripción de la imagen 1">
+    <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
+</div>
+<div class="card">
+    <h3>Título del Documento 2</h3>
+    <img src="ruta-de-la-imagen-2.jpg" alt="Descripción de la imagen 2">
+    <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
+</div>
+        <!-- Añadir más tarjetas según sea necesario -->
+    </main>
+    <section id="contacto" class="container">
+        
+        <p> <a href="mailto:info@medally.com">jossgu2023@gmail.com</a></p>
+    </section>
+</body>
+</html>
