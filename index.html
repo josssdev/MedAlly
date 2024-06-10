@@ -3,89 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Med Ally</title>
-    <link rel="icon" href="icon-modified.png" type="image/x-icon">
-    <marquee>
-     CONSULTORIO MEDICO FAMILIAR ADULAM - JOSSDEV
-    </marquee>
+    <title>Bienvenidos a Anymate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="Icon.png" type="image/png">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f3e5f5;
+    color: #4a148c;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    background-color: #d63384; /* Color rosado */
+    padding: 1em;
+    text-align: center;
+}
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.icono {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+main {
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.profesores {
+    text-align: center;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 1em;
+    margin-bottom: 30px;
+}
+
+.profesor-card {
+    background-color: #e1bee7;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+.profesor-foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.profesor-info {
+    text-align: left;
+}
+
+.profesor-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.5em;
+}
+
+.profesor-info p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <h1>Bienvenidos a Anymate</h1>
+        <img src="icongr.png" alt="Icono Anymate" class="icono">
+        <h2>Prepará las materias y aprobá cursadas + finales </h2>
+    </header>
+    <main>
+        <section class="profesores">
+            <h2></h2>
+            <div class="profesor-card">
+                <img src="any.jpg" alt="Foto del Profesor 1" class="profesor-foto">
+                <div class="profesor-info">
+                    <h3>Any Reinun</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="profesor-card">
+                <img src="lore.jpg" alt="Foto del Profesor 2" class="profesor-foto">
+                <div class="profesor-info">
+                    <h3>Lorena Giulietti</h3>
+                    <p></p>
+                </div>
+            </div>
+            <div class="profesor-card">
+                <img src="denys.jpg" alt="Foto del Profesor 3" class="profesor-foto">
+                <div class="profesor-info">
+                    <h3>Denys Zambrano</h3>
+                    <p></p>
+                </div>
+            </div>
+            <!-- Añade más profesores según sea necesario -->
+        </section>
+    </main>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Médica</title>
+    <link rel="icon" href="Icon.png" type="image/x-icon">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff;
-            color: #000000;
-        }  
-
-        header {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 10px 0;
+            background-color: #f0f0f0;
+        }
+        nav {
+            background-color: #d63384; /* Color rosado */
+            padding: 1em;
             text-align: center;
-            .marquee {
-            box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
-            border: 1px solid rgba(0, 0, 0, .15);
-            background-color: #ffffff;
-            overflow: hidden;
-            position: relative;
-            height: 50px;
-            width: 100%;
-            /* Full width of its parent */
-            white-space: nowrap;
         }
-
-        .marquee p {
-            position: absolute;
-            width: auto;
-            height: 100%;
-            margin: 0;
-            line-height: 50px;
-            text-align: center;
-            /* Start off the right edge */
-            transform: translateX(100%);
-            /* Animate to the left */
-            animation: scroll-left 20s linear infinite;
-        }
-
-        @keyframes scroll-left {
-            0% {
-                transform: translateX(100%);
-            }
-
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-
-
-        }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            background-color: #000000;
-            padding: 10px 0;
-        }
-        .navbar a {
-            color: #ffffff;
+        nav a {
+            color: white;
+            margin: 0 15px;
             text-decoration: none;
-            padding: 10px 20px;
-            transition: background-color 0.2s;
-        }
-        .navbar a:hover {
-            background-color: #333333;
-        }
-        .search-container {
-            text-align: center;
-            margin: 20px 0;
-        }
-        .search-container input {
-            padding: 10px;
-            width: 80%;
-            max-width: 600px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-size: 16px;
+            font-weight: bold;
         }
         .container {
             display: flex;
@@ -94,159 +167,99 @@
             padding: 20px;
         }
         .card {
-            background-color: #f8f8f8;
-            border: 1px solid #e0e0e0;
+            background-color: white;
+            border: 1px solid #ddd;
             border-radius: 8px;
-            margin: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 10px;
             width: 300px;
-            overflow: hidden;
+            padding: 20px;
             text-align: center;
             transition: transform 0.2s;
         }
         .card:hover {
             transform: scale(1.05);
         }
-        .card h3 {
-            background-color: #000000;
-            color: #ffffff;
-            padding: 15px;
-            margin: 0;
-        }
         .card img {
             width: 100%;
-            height: auto;
+            border-radius: 8px 8px 0 0;
         }
-        .card a {
-            display: block;
-            background-color: #000000;
-            color: #ffffff;
-            padding: 10px;
+        .card h3 {
+            color: #6f42c1; /* Color morado */
+            margin-top: 10px;
+        }
+        .card p {
+            color: #555;
+        }
+        .card button {
+            background-color: #d63384; /* Color rosado */
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
             text-decoration: none;
-            margin: 15px;
-            border-radius: 4px;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
             transition: background-color 0.2s;
         }
-        .card a:hover {
-            background-color: #333333;
+        .card button:hover {
+            background-color: #c2185b; /* Color rosado más oscuro */
         }
     </style>
-    <script>
-        function searchCards() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const cards = document.getElementsByClassName('card');
-            for (let i = 0; i < cards.length; i++) {
-                const card = cards[i];
-                const title = card.getElementsByTagName('h3')[0].innerText.toLowerCase();
-                if (title.includes(input)) {
-                    card.style.display = '';
-                } else {
-                    card.style.display = 'none';
-                }
-            }
-        }
-    </script>
-
-    
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyD1b4HjM5FTzxvl_I320MCpqC5dTerR6PQ",
-          authDomain: "med-ally.firebaseapp.com",
-          projectId: "med-ally",
-          storageBucket: "med-ally.appspot.com",
-          messagingSenderId: "218410668869",
-          appId: "1:218410668869:web:ab653ed4b683ae4598242c",
-          measurementId: "G-1MCECPSKDH"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-
-        import { GoogleAuthProvider } from "firebase/auth";
-
-const provider = new GoogleAuthProvider();
-
-      </script>
 </head>
 <body>
-    <header>
-        <h1>Med Ally</h1>
-    </header>
-    <div class="search-container">
-        <input type="text" id="searchInput" onkeyup="searchCards()" placeholder="Buscar documentos...">
-    </div>
-    <main id="inicio" class="container">
+    <div class="container">
         <div class="card">
-            <h3>MIENBRO SUPERIOR</h3>
-            <img src="mienbrosupe.jpg" alt="Descripción de la imagen 1">
-            <a href="https://drive.google.com/file/d/1Mf8kkW6DpON97RFxwMQ5Cq7i4SQ47bI2/view?usp=sharing" target="_blank">Ver Documento</a>
-        </div>
-
-        <div class="card">
-            <h3>MIENBRO INFERIOR</h3>
-            <img src="mienbroinfe.jpg" alt="Descripción de la imagen 1">
-            <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
-        </div>
-
-        <div class="card">
-            <h3>ESCAPULA</h3>
-            <img src="esapula.jpg" alt="Descripción de la imagen 2">
-            <a href="https://drive.google.com/file/d/1Mf8kkW6DpON97RFxwMQ5Cq7i4SQ47bI2/view?usp=sharing" target="_blank">Ver Documento</a>
+            <img src="pato.jpg" alt="Consulta General">
+            <h3>PATALOGIA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492216797003?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20patolog%C3%ADa?'">Contactar por WhatsApp</button>
         </div>
         <div class="card">
-          <h3>CABEZA</h3>
-          <img src="cabeza.jpg" alt="Descripción de la imagen 1">
-          <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
-      </div>
-      <div class="card">
-          <h3>MANO</h3>
-          <img src="Mano.jpg" alt="Descripción de la imagen 2">
-          <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
-      </div>
-
-
-      <!--
-    <div class="card">
-        <h3>Título del Documento 2</h3>
-        <img src="ruta-de-la-imagen-2.jpg" alt="Descripción de la imagen 2">
-        <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
-    </div>
-    <div class="card">
-      <h3>Título del Documento 1</h3>
-      <img src="ruta-de-la-imagen-1.jpg" alt="Descripción de la imagen 1">
-      <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
-  </div>
-  <div class="card">
-      <h3></h3>
-      <img src="" alt="Descripción de la imagen 2">
-      <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
-  </div>
-  <div class="card">
-    <h3>Título del Documento 1</h3>
-    <img src="ruta-de-la-imagen-1.jpg" alt="Descripción de la imagen 1">
-    <a href="enlace-al-documento-1.pdf" target="_blank">Ver Documento</a>
-</div>
-<div class="card">
-    <h3>Título del Documento 2</h3>
-    <img src="ruta-de-la-imagen-2.jpg" alt="Descripción de la imagen 2">
-    <a href="enlace-al-documento-2.pdf" target="_blank">Ver Documento</a>
-</div>
--->
-
-
+            <img src="bio.jpg" alt="Cardiología">
+            <h3>BIOLOGIA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492215244952?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20biologia?'">Contactar por WhatsApp</button>
+        </div>
+        <div class="card">
+            <img src="ana.jpg" alt="Pediatría">
+            <h3>ANATOMIA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492213141252?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20anatomia?'">Contactar por WhatsApp</button>
+        </div>
+        <div class="card">
+            <img src="micro.jpg" alt="Pediatría">
+            <h3>MICROBIOLOGIA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492216797003?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20microbiologia?'">Contactar por WhatsApp</button>
+        </div>
+        <div class="card">
+            <img src="farm.jpg" alt="Pediatría">
+            <h3>FARMACOLOGIA BASICA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492216797003?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20farmacologia%20basica?'">Contactar por WhatsApp</button>
+        </div>
+        <div class="card">
+            <img src="bioqui.jpg" alt="Pediatría">
+            <h3>BIOQUIMICA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492215244952?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20bioquimica?'">Contactar por WhatsApp</button>
+        </div>
+        <div class="card">
+            <img src="fisio.jpg" alt="Pediatría">
+            <h3>FISIOLOGIA Y FISICA BIOLOGICA</h3>
+            <p></p>
+            <button onclick="location.href='https://wa.me/5492213141252?text=Hola,%20hay%20disponibilidad%20para%20clases%20de%20fisiologia%20y%20fisica%20biologia?'">Contactar por WhatsApp</button>
+        </div>
         <!-- Añadir más tarjetas según sea necesario -->
-    </main>
-    <section id="contacto" class="container">
-        
-        <p> <a href="mailto:info@medally.com">jossgu2023@gmail.com</a></p>
-    </section>
+    </div>
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+<div class="elfsight-app-fdc8c19f-5236-44aa-b143-f2e286d23a4f" data-elfsight-app-lazy></div>
 </body>
 </html>
+
+
+
